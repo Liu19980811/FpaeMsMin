@@ -34,7 +34,7 @@
 		},
 		onLoad(){
 			setTimeout(function () {
-				console.log('start pulldown');
+				console.log('start     pulldown');
 			}, 1000);
 			uni.startPullDownRefresh();
 		},
