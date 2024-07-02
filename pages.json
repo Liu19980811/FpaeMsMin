@@ -1,0 +1,77 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path" : "pages/tabBar/homepage/homepage",
+			"style" : 
+			{
+				"navigationBarTitleText" : "首页",
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#F5F5F5"
+			}
+		},
+		{
+			"path" : "pages/tabBar/device/device",
+			"style" : 
+			{
+				"navigationBarTitleText" : "设备",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#F5F5F5"
+			}
+		},
+		{
+			"path" : "pages/tabBar/mine/mine",
+			"style" : 
+			{
+				"navigationBarTitleText" : "我的",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#F5F5F5"
+			}
+		},
+		{
+			"path" : "pages/tabBar/homepage/more-product",
+			"style" : 
+			{
+				"navigationBarTitleText" : "产品列表",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#F5F5F5",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50
+				
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#bfbfbf",
+		"selectedColor": "#5A5AF6",
+		"borderStyle": "none",
+		"backgroundColor": "#f9fafa",
+		"list": [{
+				"pagePath": "pages/tabBar/homepage/homepage",
+				"iconPath": "static/image/tabBar/homepage.png",
+				"selectedIconPath": "static/image/tabBar/homepage-sel.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/tabBar/device/device",
+				"iconPath": "static/image/tabBar/device.png",
+				"selectedIconPath": "static/image/tabBar/device-sel.png",
+				"text": "设备"
+			},
+			{
+				"pagePath": "pages/tabBar/mine/mine",
+				"iconPath": "static/image/tabBar/mine.png",
+				"selectedIconPath": "static/image/tabBar/mine-sel.png",
+				"text": "我的"
+			}
+		]
+	},
+
+	"uniIdRouter": {}
+}
