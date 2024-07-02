@@ -15,6 +15,7 @@
 			"style" : 
 			{
 				"navigationBarTitleText" : "设备",
+				"navigationStyle": "custom",
 				"navigationBarTextStyle": "black",
 				"navigationBarBackgroundColor": "#F5F5F5"
 			}
@@ -38,6 +39,14 @@
 				"enablePullDownRefresh": true,
 				"onReachBottomDistance": 50
 				
+			}
+		},
+		{
+			"path" : "pages/login/login",
+			"style" : 
+			{
+				"navigationBarTitleText" : "登录",
+				"navigationStyle": "custom"
 			}
 		}
 	],

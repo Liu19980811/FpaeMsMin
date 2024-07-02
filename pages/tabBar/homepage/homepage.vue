@@ -45,6 +45,27 @@
 				</uni-grid>
 			</uni-section>
 		</view>
+		<view class="entrance">
+			<uni-section title="快速入口" title-font-size="$uni-font-size-title" title-color="$uni-color-title">
+				<template v-slot:decoration>
+				  <image mode="aspectFill" class="custom-image-warn" src="/static/image/entrance.png"></image>
+				</template>
+				<uni-grid :column="2" :show-border="false" :square="false" @change="entranceGridchange">
+					<uni-grid-item :index="0">
+						<view class="grid-item-box">
+							<image class="warnImage" src="/static/image/pond.png" mode="aspectFill" />
+							<text class="text">我的鱼塘</text>
+						</view>
+					</uni-grid-item>
+					<uni-grid-item :index="1">
+						<view class="grid-item-box">
+							<image class="warnImage" src="/static/image/mydevice.png" mode="aspectFill" />
+							<text class="text">我的设备</text>
+						</view>
+					</uni-grid-item>
+				</uni-grid>
+			</uni-section>
+		</view>
 	</view>
 </template>
 
@@ -130,6 +151,18 @@
 				uni.navigateTo({
 					url: '/pages/tabBar/homepage/more-product'
 				})
+			},
+			entranceGridchange(e){
+				let {
+					index
+				} = e.detail
+				if(index === 0){	// 我的鱼塘
+
+				} else {	//	我的设备
+					uni.switchTab({
+						url: "/pages/tabBar/device/device"
+					})	
+				}
 			}
 		}
 	}
