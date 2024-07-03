@@ -32,8 +32,8 @@
 				<template v-slot:decoration>
 				  <image mode="aspectFill" class="custom-image-warn" src="/static/image/warning.png"></image>
 				</template>
-				<uni-grid :column="2" :show-border="false" :square="false" @change="warnGridchange">
-					<uni-grid-item v-for="(item ,index) in warnList" :index="index" :key="index">
+				<uni-grid :column="2" :margin="10" :show-border="false" :square="false" @change="warnGridchange">
+					<uni-grid-item v-for="(item ,index) in warnList" :index="index" :key="index" >
 						<view class="grid-item-box">
 							<image class="warnImage" :src="item.url" mode="aspectFill" />
 							<text class="text">{{item.text}}</text>
