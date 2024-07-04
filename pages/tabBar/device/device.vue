@@ -185,7 +185,7 @@
 			color: $uni-color-primary;
 			font-weight: bold;
 			background-color: #FFFFFF;
-			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 		}
 	
 		.tip {
@@ -208,7 +208,7 @@
 		border-radius: 80rpx;
 		height: 100rpx;
 		background-color: #ffffff;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -219,7 +219,7 @@
 		border-radius: 30rpx;
 		height: 100rpx;
 		background-color: #ffffff;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -230,7 +230,7 @@
 	}
 	.shadow {
 		/* 设置阴影效果 */
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 8px rgba(0, 0, 0, 0.2);
 	}
 	.search{
 		display: flex;

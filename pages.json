@@ -1,4 +1,11 @@
 {
+	"easycom": {
+		"custom": {
+			"^u--(.*)": "@/uni_modules/uview-plus/components/u-$1/u-$1.vue",
+			"^up-(.*)": "@/uni_modules/uview-plus/components/u-$1/u-$1.vue",
+			"^u-([^-].*)": "@/uni_modules/uview-plus/components/u-$1/u-$1.vue"
+		}
+	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path" : "pages/tabBar/homepage/homepage",
@@ -25,8 +32,7 @@
 			"style" : 
 			{
 				"navigationBarTitleText" : "我的",
-				"navigationBarTextStyle": "black",
-				"navigationBarBackgroundColor": "#F5F5F5"
+				"navigationStyle": "custom"
 			}
 		},
 		{
@@ -47,6 +53,16 @@
 			{
 				"navigationBarTitleText" : "登录",
 				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/device-details/device-details",
+			"style" : 
+			{
+				"navigationBarTitleText" : "投料机详情",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#FFF",
+				"enablePullDownRefresh": true
 			}
 		}
 	],
