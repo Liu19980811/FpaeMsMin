@@ -474,7 +474,7 @@
 			flex-direction: row;
 			align-items: center;
 			text-align: left;
-			font-size: 14px;
+			font-size: 16px;
 			color: #606266;
 			height: 36px;
 			padding: 0 12px 0 0;
@@ -498,7 +498,7 @@
 			// align-items: center;
 			/* #endif */
 			position: relative;
-			font-size: 14px;
+			font-size: 16px;
 			flex: 1;
 			/* #ifndef APP-NVUE */
 			box-sizing: border-box;
@@ -524,7 +524,7 @@
 
 		&__error {
 			color: #f56c6c;
-			font-size: 12px;
+			font-size: 14px;
 			line-height: 1;
 			padding-top: 4px;
 			position: absolute;

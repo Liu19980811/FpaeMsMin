@@ -515,7 +515,7 @@
 					justify-content: space-between;
 
 					.checklist-text {
-						font-size: 14px;
+						font-size: 16px;
 						color: #666;
 						margin-left: 5px;
 						line-height: 14px;
