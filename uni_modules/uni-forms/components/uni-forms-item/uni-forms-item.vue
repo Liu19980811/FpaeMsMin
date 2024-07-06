@@ -413,7 +413,7 @@
 				// 	const {
 				// 		labelWidth
 				// 	} = this.form
-				return this.num2px(this.labelWidth ? this.labelWidth : (labelWidth || (this.label ? 70 : 'auto')))
+				return this.num2px(this.labelWidth ? this.labelWidth : (labelWidth || (this.label ? 85 : 'auto')))
 				// }
 				// return '70px'
 			},

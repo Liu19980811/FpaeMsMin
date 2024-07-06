@@ -120,6 +120,10 @@
 </script>
 
 <style lang="scss" scoped>
+	.mypage-container{
+		padding-bottom: calc(var(--window-bottom) + 10px)	
+	}
+
   /* 自定义头部 */
   .head {
     height: 140rpx;

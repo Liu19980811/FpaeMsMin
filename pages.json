@@ -75,7 +75,7 @@
 	"tabBar": {
 		"color": "#bfbfbf",
 		"selectedColor": "#5A5AF6",
-		"borderStyle": "none",
+		"borderStyle": "white",
 		"backgroundColor": "#f9fafa",
 		"list": [{
 				"pagePath": "pages/tabBar/homepage/homepage",

@@ -19,7 +19,7 @@
 				<uni-search-bar class="search-input" placeholder="请输入设备号查询" radius="50" cancelButton="none" bgColor="#f8f8f8">
 				</uni-search-bar>
 		<!-- 		<view class="serarch-btn shadow">查询</view> -->
-				<image class="scan-icon" src="/static/image/scan.png" mode="widthFix"></image>
+				<uni-icons color="#5A5AF6" class="scan-icon" type="scan" size="32"></uni-icons>
 			</view>
 			
 			<view class="info">
@@ -51,6 +51,39 @@
 				@fabClick="fabClick" />
 		</view>
 	</view>
+	
+	<up-popup bgColor="" :show="showPopup" :closeable="true" :closeOnClickOverlay="false" :round="20" mode="bottom" @close="closePopup" @open="openPopup">
+		<view class="form">
+				<uni-forms ref="form" :rules="addDeviceInfoRules" :model="addDeviceInfo" >
+					
+						<uni-forms-item  label="设备类型" name="type" required>
+							    <uni-data-select
+									:clear="true"
+									v-model="value"
+									:localdata="deviceTypes"
+									@change="typeSelectChange"
+							    ></uni-data-select>
+						</uni-forms-item>
+						<uni-forms-item  label="塘口" name="pond" required>
+							    <uni-data-select 
+									:clear="true"
+									v-model="value"
+									:localdata="ponds"
+									@change="pondSelectChange"
+									placement="top"
+							    ></uni-data-select>
+						</uni-forms-item>
+						<uni-forms-item style="margin-right: -25rpx;" label="设备号" name="devId" required>
+								<view style="display: flex;flex-direction: row;">
+									<uni-easyinput type="text" placeholder="请输入设备号"/>
+									<uni-icons color="#5A5AF6" class="scan-icon" type="scan" size="36"></uni-icons>
+								</view>
+						</uni-forms-item>
+				
+				</uni-forms>
+				<button class="button" @click="submit">添加</button>
+		</view>
+	</up-popup>
 </template>
 
 <script>
@@ -127,7 +160,60 @@
 				}, {
 					name: '离线'
 				}],
-				current: 0
+				deviceTypes:[{
+					text: '投料机',
+					value: 0
+				},{
+					text: '增氧机',
+					value: 1
+				},{
+					text: '水质监测',
+					value: 2
+				},{
+					text: '水位水温',
+					value: 3
+				}],
+				ponds:[{
+					text: '塘1',
+					value: 0
+				},{
+					text: '塘2',
+					value: 1
+				},{
+					text: '塘3',
+					value: 2
+				},{
+					text: '塘4',
+					value: 3
+				}],
+				addDeviceInfo:{
+					
+				},
+				addDeviceInfoRules:{
+					type: {
+						rules: [{
+								required: true,
+								errorMessage: '请选择设备类型',
+							}
+						]
+					},
+					pond: {
+						rules: [{
+								required: true,
+								errorMessage: '请选择塘口',
+							}
+						]
+					},
+					devId: {
+						rules: [{
+								required: true,
+								errorMessage: '请输入设备号',
+							}
+						]
+					},
+				},
+				current: 0,
+				showPopup: false
 			}
 		},
 		onShow() {
@@ -148,13 +234,39 @@
 					title: '点击了添加按钮',
 					icon: 'none'
 				})
+				this.showPopup = true
+			},
+			openPopup() {
+			// console.log('open');
+			},
+			closePopup() {
+				this.showPopup = false
+			// console.log('close');
 			},
 			tabsClick(){
 				
 			},
 			tabsChange(index){
 				this.current = index;
+			},
+			typeSelectChange(e){
+				
+			},
+			submit(){
+				this.$refs.form.validate().then(res=>{
+					uni.showToast({
+						title: '添加成功',
+						icon: 'none'
+					})
+					this.showPopup = false
+					console.log('表单数据信息：', res);
+				}).catch(err =>{
+					console.log('表单错误信息：', err);
+				})
+
+
 			}
+			
 		}
 	}
 </script>
@@ -189,7 +301,7 @@
 		}
 	
 		.tip {
-			padding-top: 30rpx;
+			padding-top: 20rpx;
 			color: #FFFFFF;
 			font-size: 40rpx;
 			letter-spacing: 5rpx;
@@ -257,13 +369,24 @@
 		margin-right: 5px;
 	}
 	.scan-icon{
-		margin-right: 5px;
-		height: 48px;
-		width: 48px;
+		margin-right: 20rpx;
+		border-radius: 10rpx;
 	}
 	.device-list{
 		width: 100%;
 		height: 100%;
 	}
-
+	.form{
+		padding: 20rpx;
+		margin-top: 30px;
+	}
+	.button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $uni-color-primary;
+		color: white; /* 按钮文本颜色 */
+		height: 35px;
+		border-radius: 60rpx;
+	}
 </style>

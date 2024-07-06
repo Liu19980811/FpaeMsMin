@@ -1,11 +1,11 @@
 <template>
-	<view class="container">
+	<view class="">
 		<uni-swiper-dot class="uni-swiper-dot-box" @clickItem=clickItem :info="info" :current="current" :mode="mode"
 			:dots-styles="dotsStyles">
 			<swiper class="swiper-box" @change="change" :current="current" :autoplay="autoplay">
 				<swiper-item v-for="(item, index) in info" :key="index">
 					<view>
-						<image class="image" :src="item.url" mode="aspectFill"></image>
+						<image class="swiper-image" :src="item.url" mode="aspectFill"></image>
 					</view>
 				</swiper-item>
 			</swiper>
@@ -53,7 +53,7 @@
 				<uni-grid :column="2" :show-border="false" :square="false" @change="entranceGridchange">
 					<uni-grid-item :index="0">
 						<view class="grid-item-box">
-							<image class="warnImage" src="/static/image/pond.png" mode="aspectFill" />
+							<image class="image warnImage" src="/static/image/pond.png" mode="aspectFill" />
 							<text class="text">我的鱼塘</text>
 						</view>
 					</uni-grid-item>
@@ -126,7 +126,7 @@
 				warnList:[
 					{
 						url: '/static/image/today.png',
-						text: '今天报警数',
+						text: '今日报警数',
 						badge: '1',
 						type: "error"
 					},
@@ -176,10 +176,11 @@ page {
 }
 /* #endif */
 .swiper-box {
-		height: 200px;
+		height: 420rpx;
 	}
+	
 
-	.image {
+	.swiper-image {
 		width: 100%;
 	}
 
@@ -215,7 +216,11 @@ page {
 	}
 	
 	.notice-bar {
-		margin-bottom: 0px;
+		margin: 0rpx;
+
+	}
+	.product-list{
+		margin-top: -20rpx;
 	}
 	.custom-image {
 		width: 18px;
