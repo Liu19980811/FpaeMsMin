@@ -32,7 +32,7 @@
     
     <!-- 我的积分/我的任务/我的收藏 -->
     <view class="menu-box">
-      <view class="menu-item">
+      <view class="menu-item" @click="myPondClick">
         <view class="menu-item-left">
           <image src="/static/logo.png"></image>
           <view class="menu-item-left-text">
@@ -43,7 +43,7 @@
           <view class="arrow-right"></view>
         </view>
       </view>
-      <view class="menu-item">
+<!--      <view class="menu-item">
         <view class="menu-item-left">
           <image src="/static/logo.png"></image>
           <view class="menu-item-left-text">
@@ -53,8 +53,8 @@
         <view class="menu-item-right">
           <view class="arrow-right"></view>
         </view>
-      </view>
-      <view class="menu-item">
+      </view> -->
+      <view class="menu-item" @click="warnRecodClick">
         <view class="menu-item-left">
           <image src="/static/logo.png"></image>
           <view class="menu-item-left-text">
@@ -66,9 +66,9 @@
         </view>
       </view>
     </view>
-    <!-- 我的下载/我的粉丝/联系我们 -->
+    <!-- 联系我们 -->
     <view class="menu-box">
-      <view class="menu-item">
+      <view class="menu-item" @click="contactUsClick">
         <view class="menu-item-left">
           <image src="/static/logo.png"></image>
           <view class="menu-item-left-text">
@@ -114,7 +114,21 @@
 
     },
     methods: {
-
+		myPondClick(){
+			uni.navigateTo({
+				url: '/pages/my-ponds/my-ponds'
+			})
+		},
+		warnRecodClick(){
+			uni.navigateTo({
+				url: '/pages/warn-info/warn-info'
+			})
+		},
+		contactUsClick(){
+			uni.makePhoneCall({
+				phoneNumber: '0371 6688 8851'
+			});
+		}
     }
   }
 </script>

@@ -152,12 +152,28 @@
 					url: '/pages/tabBar/homepage/more-product'
 				})
 			},
+			warnGridchange(e){
+				let {
+					index
+				} = e.detail
+				if(index === 0){	// 今日报警数
+					uni.navigateTo({
+						url: '/pages/warn-info/warn-info'
+					})
+				} else {	//	本月报警数
+					uni.navigateTo({
+						url: '/pages/warn-info/warn-info'
+					})
+				}
+			},
 			entranceGridchange(e){
 				let {
 					index
 				} = e.detail
 				if(index === 0){	// 我的鱼塘
-
+					uni.navigateTo({
+						url: '/pages/my-ponds/my-ponds'
+					})
 				} else {	//	我的设备
 					uni.switchTab({
 						url: "/pages/tabBar/device/device"

@@ -64,6 +64,26 @@
 				"navigationBarBackgroundColor": "#FFF",
 				"enablePullDownRefresh": true
 			}
+		},
+		{
+			"path" : "pages/my-ponds/my-ponds",
+			"style" : 
+			{
+				"navigationBarTitleText" : "我的鱼塘",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#FFF",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path" : "pages/warn-info/warn-info",
+			"style" : 
+			{
+				"navigationBarTitleText" : "报警记录",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#FFF",
+				"enablePullDownRefresh": true
+			}
 		}
 	],
 	"globalStyle": {
