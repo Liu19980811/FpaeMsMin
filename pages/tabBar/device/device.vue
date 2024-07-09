@@ -41,7 +41,7 @@
 			
 			<view class="device-list">
 				<scroll-view scroll-with-animation scroll-y style="height: 500px;">
-					<device-cards :deviceList="cards"></device-cards>
+					<device-cards :deviceList="devices"></device-cards>
 				</scroll-view>
 			</view>
 		</view>
@@ -56,10 +56,10 @@
 		<view class="form">
 				<uni-forms ref="form" :rules="addDeviceInfoRules" :model="addDeviceInfo" >
 					
-						<uni-forms-item  label="设备类型" name="type" required>
+						<uni-forms-item  label="设备类型" name="deviceType" required>
 							    <uni-data-select
 									:clear="true"
-									v-model="value"
+									v-model="addDeviceInfo.deviceType"
 									:localdata="deviceTypes"
 									@change="typeSelectChange"
 							    ></uni-data-select>
@@ -67,7 +67,7 @@
 						<uni-forms-item  label="塘口" name="pond" required>
 							    <uni-data-select 
 									:clear="true"
-									v-model="value"
+									v-model="addDeviceInfo.pond"
 									:localdata="ponds"
 									@change="pondSelectChange"
 									placement="top"
@@ -75,7 +75,7 @@
 						</uni-forms-item>
 						<uni-forms-item style="margin-right: -25rpx;" label="设备号" name="devId" required>
 								<view style="display: flex;flex-direction: row;">
-									<uni-easyinput type="text" placeholder="请输入设备号"/>
+									<uni-easyinput v-model="addDeviceInfo.devId" type="text" placeholder="请输入设备号"/>
 									<uni-icons color="#5A5AF6" class="scan-icon" type="scan" size="36"></uni-icons>
 								</view>
 						</uni-forms-item>
@@ -96,7 +96,7 @@
 						title: '筛选',
 						type: 'filter',
 						children: [{
-								title: "设别类型",
+								title: "设备类型",
 								type: 'radio',
 								value: null,
 								options: [{
@@ -154,7 +154,7 @@
 					iconColor: '#fff'
 				},
 				tabList:[{
-					name: '全部(2)',
+					name: '全部(3)',
 				}, {
 					name: '在线',
 				}, {
@@ -186,11 +186,47 @@
 					text: '塘4',
 					value: 3
 				}],
+				devices: [{
+					id: 1,
+					deviceType: 0,
+					deviceTypeName: "投料机",
+					pond: "塘1",
+					devId:"001001",
+					image: "/static/image/device.jpeg",
+					status: 1,
+					statusName: "在线",
+					runningState: 0,
+					runningStateName:"空闲"
+				},{
+					id: 2,
+					deviceType: 0,
+					deviceTypeName: "投料机",
+					pond: "塘2",
+					devId:"001002",
+					image: "/static/image/device.jpeg",
+					status: 1,
+					statusName: "在线",
+					runningState: 1,
+					runningStateName:"投料中"
+				},{
+					id: 3,
+					deviceType: 1,
+					deviceTypeName: "增氧机",
+					pond: "塘2",
+					devId:"002001",
+					image: "/static/image/device.jpeg",
+					status: 0,
+					statusName: "离线",
+					runningState: 0,
+					runningStateName:"空闲"
+				}],
 				addDeviceInfo:{
-					
+					deviceType:null,
+					pond:null,
+					devId:null
 				},
 				addDeviceInfoRules:{
-					type: {
+					deviceType: {
 						rules: [{
 								required: true,
 								errorMessage: '请选择设备类型',
@@ -254,6 +290,18 @@
 			},
 			submit(){
 				this.$refs.form.validate().then(res=>{
+					this.devices.push({
+						id:this.devices[this.devices.length-1].id + 1,
+						deviceType: this.addDeviceInfo.deviceType,
+						deviceTypeName: "投料机",
+						pond: this.addDeviceInfo.pond,
+						devId:this.addDeviceInfo.devId,
+						image: "/static/image/device.jpeg",
+						status: 0,
+						statusName: "离线",
+						runningState: 0,
+						runningStateName:"空闲"
+					});
 					uni.showToast({
 						title: '添加成功',
 						icon: 'none'

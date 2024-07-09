@@ -239,13 +239,13 @@ page {
 		margin-top: -20rpx;
 	}
 	.custom-image {
-		width: 18px;
-		height: 18px;
+		width: 20px;
+		height: 20px;
 		margin-right: 10px;
 	}
 	.custom-image-warn {
-		width: 25px;
-		height: 25px;
+		width: 22px;
+		height: 22px;
 		margin-right: 10px;
 	}
 	.uni-list-item:active {
