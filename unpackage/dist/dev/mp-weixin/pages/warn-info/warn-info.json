@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "报警记录",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#FFF",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "u-dropdown-item": "../../uni_modules/uview-plus/components/u-dropdown-item/u-dropdown-item",
+    "up-icon": "../../uni_modules/uview-plus/components/u-icon/u-icon",
+    "u-button": "../../uni_modules/uview-plus/components/u-button/u-button",
+    "u-dropdown": "../../uni_modules/uview-plus/components/u-dropdown/u-dropdown",
+    "up-empty": "../../uni_modules/uview-plus/components/u-empty/u-empty",
+    "warn-list": "../../components/warn-list/warn-list",
+    "up-datetime-picker": "../../uni_modules/uview-plus/components/u-datetime-picker/u-datetime-picker"
+  }
+}

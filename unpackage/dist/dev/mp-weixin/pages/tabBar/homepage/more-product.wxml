@@ -1,0 +1,1 @@
+<view class="container"><product-list wx:if="{{a}}" u-i="6677c9da-0" bind:__l="__l" u-p="{{a}}"></product-list></view>

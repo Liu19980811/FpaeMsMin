@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/tabBar/homepage/homepage",
+    "pages/tabBar/device/device",
+    "pages/tabBar/mine/mine",
+    "pages/tabBar/homepage/more-product",
+    "pages/login/login",
+    "pages/device-details/device-details",
+    "pages/my-ponds/my-ponds",
+    "pages/warn-info/warn-info"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#5A5AF6",
+    "borderStyle": "white",
+    "backgroundColor": "#f9fafa",
+    "list": [
+      {
+        "pagePath": "pages/tabBar/homepage/homepage",
+        "iconPath": "static/image/tabBar/homepage.png",
+        "selectedIconPath": "static/image/tabBar/homepage-sel.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tabBar/device/device",
+        "iconPath": "static/image/tabBar/device.png",
+        "selectedIconPath": "static/image/tabBar/device-sel.png",
+        "text": "设备"
+      },
+      {
+        "pagePath": "pages/tabBar/mine/mine",
+        "iconPath": "static/image/tabBar/mine.png",
+        "selectedIconPath": "static/image/tabBar/mine-sel.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

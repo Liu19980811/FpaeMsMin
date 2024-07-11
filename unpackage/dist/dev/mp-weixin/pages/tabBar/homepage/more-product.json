@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "产品列表",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#F5F5F5",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "product-list": "../../../components/product-list/product-list"
+  }
+}
