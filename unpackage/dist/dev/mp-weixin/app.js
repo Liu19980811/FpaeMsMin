@@ -9,11 +9,12 @@ if (!Math) {
   "./pages/login/login.js";
   "./pages/device-details/device-details.js";
   "./pages/my-ponds/my-ponds.js";
-  "./pages/warn-info/warn-info.js";
+  "./pages/warn-records/warn-records.js";
+  "./pages/warn-records/single-dev-warn.js";
 }
 const _sfc_main = {
   onLaunch: function() {
-    console.log("App Launch");
+    console.log("App  Launch");
   },
   onShow: function() {
     console.log("App Show");
@@ -22,9 +23,8 @@ const _sfc_main = {
     console.log("App Hide");
   }
 };
-const App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "D:/HBuilderProjects/FpaeMsMin/App.vue"]]);
 function createApp() {
-  const app = common_vendor.createSSRApp(App);
+  const app = common_vendor.createSSRApp(_sfc_main);
   return {
     app
   };

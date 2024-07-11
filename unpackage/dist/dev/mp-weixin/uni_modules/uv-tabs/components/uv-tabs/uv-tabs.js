@@ -212,5 +212,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     h: common_vendor.s(_ctx.$uv.addStyle(_ctx.customStyle))
   };
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-fd5fcf14"], ["__file", "D:/HBuilderProjects/FpaeMsMin/uni_modules/uv-tabs/components/uv-tabs/uv-tabs.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-fd5fcf14"]]);
 wx.createComponent(Component);

@@ -28,5 +28,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     b: common_vendor.n(!$data.isNvue && "u-safe-area-inset-bottom")
   };
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-f3d22cfe"], ["__file", "D:/HBuilderProjects/FpaeMsMin/uni_modules/uview-plus/components/u-safe-bottom/u-safe-bottom.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-f3d22cfe"]]);
 wx.createComponent(Component);

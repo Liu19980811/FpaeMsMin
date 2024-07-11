@@ -76,10 +76,20 @@
 			}
 		},
 		{
-			"path" : "pages/warn-info/warn-info",
+			"path" : "pages/warn-records/warn-records",
 			"style" : 
 			{
 				"navigationBarTitleText" : "报警记录",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#FFF",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path" : "pages/warn-records/single-dev-warn",
+			"style" : 
+			{
+				"navigationBarTitleText" : "投料机001报警记录",
 				"navigationBarTextStyle": "black",
 				"navigationBarBackgroundColor": "#FFF",
 				"enablePullDownRefresh": true

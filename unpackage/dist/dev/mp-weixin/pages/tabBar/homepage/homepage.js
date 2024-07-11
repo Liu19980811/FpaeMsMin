@@ -1,5 +1,6 @@
 "use strict";
 const common_vendor = require("../../../common/vendor.js");
+const common_assets = require("../../../common/assets.js");
 const _sfc_main = {
   components: {},
   data() {
@@ -90,11 +91,11 @@ const _sfc_main = {
       } = e.detail;
       if (index === 0) {
         common_vendor.index.navigateTo({
-          url: "/pages/warn-info/warn-info"
+          url: "/pages/warn-records/warn-records"
         });
       } else {
         common_vendor.index.navigateTo({
-          url: "/pages/warn-info/warn-info"
+          url: "/pages/warn-records/warn-records"
         });
       }
     },
@@ -162,20 +163,22 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       ["background-color"]: "#EAF2FF",
       text: $data.noticeText
     }),
-    h: common_vendor.p({
+    h: common_assets._imports_0,
+    i: common_vendor.p({
       productListProp: $data.productList
     }),
-    i: common_vendor.o(($event) => $options.moreProductListOnClick()),
-    j: common_vendor.p({
+    j: common_vendor.o(($event) => $options.moreProductListOnClick()),
+    k: common_vendor.p({
       type: "more-filled",
       size: "30px"
     }),
-    k: common_vendor.p({
+    l: common_vendor.p({
       title: "产品列表",
       ["title-font-size"]: "$uni-font-size-title",
       ["title-color"]: "$uni-color-title"
     }),
-    l: common_vendor.f($data.warnList, (item, index, i0) => {
+    m: common_assets._imports_1,
+    n: common_vendor.f($data.warnList, (item, index, i0) => {
       return common_vendor.e({
         a: item.url,
         b: common_vendor.t(item.text),
@@ -194,36 +197,39 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         })
       });
     }),
-    m: common_vendor.o($options.warnGridchange),
-    n: common_vendor.p({
+    o: common_vendor.o($options.warnGridchange),
+    p: common_vendor.p({
       column: 2,
       margin: 10,
       ["show-border"]: false,
       square: false
     }),
-    o: common_vendor.p({
+    q: common_vendor.p({
       title: "报警统计",
       ["title-font-size"]: "$uni-font-size-title",
       ["title-color"]: "$uni-color-title"
     }),
-    p: common_vendor.p({
+    r: common_assets._imports_2,
+    s: common_assets._imports_3,
+    t: common_vendor.p({
       index: 0
     }),
-    q: common_vendor.p({
+    v: common_assets._imports_4,
+    w: common_vendor.p({
       index: 1
     }),
-    r: common_vendor.o($options.entranceGridchange),
-    s: common_vendor.p({
+    x: common_vendor.o($options.entranceGridchange),
+    y: common_vendor.p({
       column: 2,
       ["show-border"]: false,
       square: false
     }),
-    t: common_vendor.p({
+    z: common_vendor.p({
       title: "快速入口",
       ["title-font-size"]: "$uni-font-size-title",
       ["title-color"]: "$uni-color-title"
     })
   };
 }
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-89f56eb1"], ["__file", "D:/HBuilderProjects/FpaeMsMin/pages/tabBar/homepage/homepage.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-89f56eb1"]]);
 wx.createPage(MiniProgramPage);

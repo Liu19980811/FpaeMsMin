@@ -94,5 +94,5 @@ const _sfc_main = {
     };
   }
 };
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-815bc7d5"], ["__file", "D:/HBuilderProjects/FpaeMsMin/uni_modules/le-dropdown/components/le-dropdown/components/le-picker.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-815bc7d5"]]);
 wx.createComponent(Component);

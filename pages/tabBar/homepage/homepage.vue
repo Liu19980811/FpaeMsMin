@@ -158,11 +158,11 @@
 				} = e.detail
 				if(index === 0){	// 今日报警数
 					uni.navigateTo({
-						url: '/pages/warn-info/warn-info'
+						url: '/pages/warn-records/warn-records'
 					})
 				} else {	//	本月报警数
 					uni.navigateTo({
-						url: '/pages/warn-info/warn-info'
+						url: '/pages/warn-records/warn-records'
 					})
 				}
 			},

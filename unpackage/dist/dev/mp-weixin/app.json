@@ -7,7 +7,8 @@
     "pages/login/login",
     "pages/device-details/device-details",
     "pages/my-ponds/my-ponds",
-    "pages/warn-info/warn-info"
+    "pages/warn-records/warn-records",
+    "pages/warn-records/single-dev-warn"
   ],
   "window": {
     "navigationBarTextStyle": "black",

@@ -1,5 +1,6 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
+const common_assets = require("../../common/assets.js");
 const _sfc_main = {
   data() {
     return {
@@ -141,48 +142,49 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         f: "d1cd6628-2-" + i0 + ",d1cd6628-1"
       };
     }),
-    c: common_vendor.p({
+    c: common_assets._imports_0$1,
+    d: common_vendor.p({
       ["right-options"]: $data.options
     }),
-    d: common_vendor.sr("fab", "d1cd6628-3"),
-    e: common_vendor.o($options.fabClick),
-    f: common_vendor.p({
+    e: common_vendor.sr("fab", "d1cd6628-3"),
+    f: common_vendor.o($options.fabClick),
+    g: common_vendor.p({
       pattern: _ctx.pattern,
       horizontal: "right",
       popMenu: "false"
     }),
-    g: common_vendor.o(($event) => $data.pondInfo.name = $event),
-    h: common_vendor.p({
+    h: common_vendor.o(($event) => $data.pondInfo.name = $event),
+    i: common_vendor.p({
       type: "text",
       placeholder: "请输入塘口号",
       modelValue: $data.pondInfo.name
     }),
-    i: common_vendor.p({
+    j: common_vendor.p({
       label: "塘口号",
       name: "name",
       required: true
     }),
-    j: common_vendor.o(($event) => $data.pondInfo.pondSn = $event),
-    k: common_vendor.p({
+    k: common_vendor.o(($event) => $data.pondInfo.pondSn = $event),
+    l: common_vendor.p({
       type: "text",
       placeholder: "请输入塘口号",
       modelValue: $data.pondInfo.pondSn
     }),
-    l: common_vendor.p({
+    m: common_vendor.p({
       label: "塘口编号",
       name: "sn",
       required: true
     }),
-    m: common_vendor.sr("form", "d1cd6628-5,d1cd6628-4"),
-    n: common_vendor.p({
+    n: common_vendor.sr("form", "d1cd6628-5,d1cd6628-4"),
+    o: common_vendor.p({
       rules: $data.pondInfoRules,
       model: $data.pondInfo
     }),
-    o: common_vendor.t($data.formType === 0 ? "添加" : "修改"),
-    p: common_vendor.o((...args) => $options.submit && $options.submit(...args)),
-    q: common_vendor.o($options.closePopup),
-    r: common_vendor.o($options.openPopup),
-    s: common_vendor.p({
+    p: common_vendor.t($data.formType === 0 ? "添加" : "修改"),
+    q: common_vendor.o((...args) => $options.submit && $options.submit(...args)),
+    r: common_vendor.o($options.closePopup),
+    s: common_vendor.o($options.openPopup),
+    t: common_vendor.p({
       bgColor: "",
       show: $data.showPopup,
       closeable: true,
@@ -192,5 +194,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   };
 }
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/HBuilderProjects/FpaeMsMin/pages/my-ponds/my-ponds.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render]]);
 wx.createPage(MiniProgramPage);

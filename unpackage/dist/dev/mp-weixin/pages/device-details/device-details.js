@@ -1,5 +1,6 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
+const common_assets = require("../../common/assets.js");
 const _sfc_main = {
   data() {
     return {
@@ -122,9 +123,13 @@ const _sfc_main = {
     },
     addTimeSlot() {
       if (this.timeSlotLists.length > 7) {
-        common_vendor.index.showToast({
-          title: "最多添加8个时段",
-          icon: "error"
+        this.$refs.uNotify.show({
+          top: 1,
+          type: "warning",
+          message: "最多添加8个时段",
+          duration: 1e3 * 3,
+          fontSize: 20,
+          safeAreaInsetTop: true
         });
         return;
       }
@@ -132,6 +137,8 @@ const _sfc_main = {
       this.pickerTitle = "请选择起始时间";
       this.addOrUpdateTimeSlotIndex = -1;
       this.pickerTime = this.getNowHousM();
+      this.timeSlot.beginTime = this.getNowHousM();
+      this.timeSlot.endTime = this.getNowHousM(1);
       this.showPicker = true;
     },
     modifyTimeSlot(index, item) {
@@ -166,9 +173,13 @@ const _sfc_main = {
           this.timeSlotLists[this.addOrUpdateTimeSlotIndex] = t;
         }
         this.showPicker = false;
-        common_vendor.index.showToast({
-          title: "操作成功",
-          icon: "success"
+        this.$refs.uNotify.show({
+          top: 1,
+          type: "success",
+          message: "操作成功",
+          duration: 1e3 * 3,
+          fontSize: 20,
+          safeAreaInsetTop: true
         });
       }
     },
@@ -184,21 +195,6 @@ const _sfc_main = {
       this.modalContent = "确认要删除时段" + (index + 1) + "吗？";
       this.delTimeSlotIndex = index;
       this.showModal = true;
-      common_vendor.index.showModal({
-        title: "提示",
-        content: "确认要删除时段" + (index + 1) + "吗？",
-        success: function(res) {
-          if (res.confirm) {
-            this.timeSlotLists.splice(index, 1);
-            common_vendor.index.showToast({
-              title: "删除成功",
-              icon: "success"
-            });
-            console.log("用户点击确定");
-          } else if (res.cancel)
-            ;
-        }
-      });
     },
     modalConfirm() {
       this.timeSlotLists.splice(this.delTimeSlotIndex, 1);
@@ -217,6 +213,11 @@ const _sfc_main = {
       let minute = 0;
       const formattedTime = `${hour.toString().padStart(2, "0")}:${minute.toString().padStart(2, "0")}`;
       return formattedTime;
+    },
+    warnListOnClick() {
+      common_vendor.index.navigateTo({
+        url: "/pages/warn-records/single-dev-warn?devId=1"
+      });
     }
   }
 };
@@ -267,9 +268,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     e: common_vendor.p({
       span: 4
     }),
-    f: common_vendor.p({
-      span: 12
-    }),
+    f: common_assets._imports_0$2,
     g: common_vendor.p({
       span: 12
     }),
@@ -292,41 +291,44 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       span: 12
     }),
     n: common_vendor.p({
+      span: 12
+    }),
+    o: common_vendor.p({
       ["custom-prefix"]: "iconfont",
       type: "icon-kaiguan",
       size: "24",
       color: "#FFFFFF"
     }),
-    o: common_vendor.t($data.isStop ? "停止" : "启动"),
-    p: common_vendor.n($options.startBtn),
-    q: common_vendor.o((...args) => $options.startOrStopClick && $options.startOrStopClick(...args)),
-    r: common_vendor.p({
+    p: common_vendor.t($data.isStop ? "停止" : "启动"),
+    q: common_vendor.n($options.startBtn),
+    r: common_vendor.o((...args) => $options.startOrStopClick && $options.startOrStopClick(...args)),
+    s: common_vendor.p({
       ["custom-prefix"]: "iconfont",
       type: "icon-peizhi",
       size: "24",
       color: "#FFFFFF"
     }),
-    s: common_vendor.o((...args) => $options.configOnClick && $options.configOnClick(...args)),
-    t: common_vendor.o(($event) => _ctx.moreProductListOnClick()),
+    t: common_vendor.o((...args) => $options.configOnClick && $options.configOnClick(...args)),
     v: common_vendor.p({
       type: "right",
       size: "22px"
     }),
-    w: common_vendor.p({
+    w: common_vendor.o($options.warnListOnClick),
+    x: common_vendor.p({
       title: "报警信息",
       type: "line",
       ["title-font-size"]: "36rpx"
     }),
-    x: common_vendor.o(($event) => $data.deviceInfo.mode = $event),
-    y: common_vendor.p({
+    y: common_vendor.o(($event) => $data.deviceInfo.mode = $event),
+    z: common_vendor.p({
       localdata: $data.modes,
       modelValue: $data.deviceInfo.mode
     }),
-    z: common_vendor.p({
+    A: common_vendor.p({
       label: "模式",
       name: "mode"
     }),
-    A: common_vendor.p({
+    B: common_vendor.p({
       value: 0,
       step: 1,
       min: 0,
@@ -334,14 +336,14 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       background: "#5A5AF6",
       color: "#fff"
     }),
-    B: $data.deviceInfo.mode === 0,
-    C: common_vendor.p({
+    C: $data.deviceInfo.mode === 0,
+    D: common_vendor.p({
       type: "plusempty",
       size: "18",
       color: "#FFFFFF"
     }),
-    D: common_vendor.o((...args) => $options.addTimeSlot && $options.addTimeSlot(...args)),
-    E: common_vendor.f($data.timeSlotLists, (item, index, i0) => {
+    E: common_vendor.o((...args) => $options.addTimeSlot && $options.addTimeSlot(...args)),
+    F: common_vendor.f($data.timeSlotLists, (item, index, i0) => {
       return {
         a: "8746ba7f-33-" + i0 + ",8746ba7f-31",
         b: common_vendor.o(($event) => $options.delTimeSlot(index), index),
@@ -361,19 +363,19 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         k: index
       };
     }),
-    F: common_vendor.p({
+    G: common_vendor.p({
       type: "closeempty",
       size: "22",
       color: "#FFFFFF"
     }),
-    G: common_vendor.p({
+    H: common_vendor.p({
       ["custom-prefix"]: "iconfont",
       type: "icon-xiugai",
       size: "20",
       color: "#FFFFFF"
     }),
-    H: $data.deviceInfo.mode === 2,
-    I: common_vendor.p({
+    I: $data.deviceInfo.mode === 2,
+    J: common_vendor.p({
       value: 0,
       step: 1,
       min: 0,
@@ -381,12 +383,12 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       background: "#5A5AF6",
       color: "#fff"
     }),
-    J: common_vendor.p({
+    K: common_vendor.p({
       ["label-width"]: "120",
       label: "投料 (0~99秒)",
       name: "mode"
     }),
-    K: common_vendor.p({
+    L: common_vendor.p({
       value: 0,
       step: 1,
       min: 0,
@@ -394,12 +396,12 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       background: "#5A5AF6",
       color: "#fff"
     }),
-    L: common_vendor.p({
+    M: common_vendor.p({
       ["label-width"]: "120",
       label: "间隔 (0~999秒)",
       name: "mode"
     }),
-    M: common_vendor.p({
+    N: common_vendor.p({
       value: 0,
       step: 1,
       min: 1,
@@ -407,12 +409,12 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       background: "#5A5AF6",
       color: "#fff"
     }),
-    N: common_vendor.p({
+    O: common_vendor.p({
       ["label-width"]: "120",
       label: "出料量 (1~16档)",
       name: "mode"
     }),
-    O: common_vendor.p({
+    P: common_vendor.p({
       value: 0,
       step: 1,
       min: 1,
@@ -420,20 +422,20 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       background: "#5A5AF6",
       color: "#fff"
     }),
-    P: common_vendor.p({
+    Q: common_vendor.p({
       ["label-width"]: "120",
       label: "面积 (1~16档)",
       name: "mode"
     }),
-    Q: common_vendor.sr("customForm", "8746ba7f-26,8746ba7f-25"),
-    R: common_vendor.p({
+    R: common_vendor.sr("customForm", "8746ba7f-26,8746ba7f-25"),
+    S: common_vendor.p({
       rules: $data.deviceInfoRules,
       model: $data.deviceInfo
     }),
-    S: common_vendor.o(($event) => _ctx.submit("customForm")),
-    T: common_vendor.o($options.closePopup),
-    U: common_vendor.o($options.openPopup),
-    V: common_vendor.p({
+    T: common_vendor.o(($event) => _ctx.submit("customForm")),
+    U: common_vendor.o($options.closePopup),
+    V: common_vendor.o($options.openPopup),
+    W: common_vendor.p({
       bgColor: "",
       show: $data.showPopup,
       closeable: true,
@@ -441,31 +443,31 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       round: 20,
       mode: "bottom"
     }),
-    W: common_vendor.o($options.cancelPicker),
-    X: common_vendor.o($options.confirmPicker),
-    Y: common_vendor.o($options.closePicker),
-    Z: common_vendor.o(($event) => $data.pickerTime = $event),
-    aa: common_vendor.p({
+    X: common_vendor.o($options.cancelPicker),
+    Y: common_vendor.o($options.confirmPicker),
+    Z: common_vendor.o($options.closePicker),
+    aa: common_vendor.o(($event) => $data.pickerTime = $event),
+    ab: common_vendor.p({
       hasInput: true,
       show: $data.showPicker,
       mode: "time",
       title: $data.pickerTitle,
       modelValue: $data.pickerTime
     }),
-    ab: $data.showPicker,
-    ac: common_vendor.o($options.modalConfirm),
-    ad: common_vendor.o($options.modalCancel),
-    ae: common_vendor.p({
+    ac: $data.showPicker,
+    ad: common_vendor.o($options.modalConfirm),
+    ae: common_vendor.o($options.modalCancel),
+    af: common_vendor.p({
       show: $data.showModal,
       title: $data.modalTitle,
       content: $data.modalContent,
       showCancelButton: "true"
     }),
-    af: common_vendor.sr("uNotify", "8746ba7f-46"),
-    ag: common_vendor.p({
+    ag: common_vendor.sr("uNotify", "8746ba7f-46"),
+    ah: common_vendor.p({
       message: "Hi uview-plus"
     })
   };
 }
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-8746ba7f"], ["__file", "D:/HBuilderProjects/FpaeMsMin/pages/device-details/device-details.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-8746ba7f"]]);
 wx.createPage(MiniProgramPage);

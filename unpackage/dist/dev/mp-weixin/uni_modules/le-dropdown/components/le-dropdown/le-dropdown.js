@@ -308,5 +308,4 @@ const _sfc_main = {
     };
   }
 };
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "D:/HBuilderProjects/FpaeMsMin/uni_modules/le-dropdown/components/le-dropdown/le-dropdown.vue"]]);
-wx.createComponent(Component);
+wx.createComponent(_sfc_main);

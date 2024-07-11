@@ -433,7 +433,9 @@
 				return formattedTime;
 			},
 			warnListOnClick(){
-				
+				uni.navigateTo({
+					url: '/pages/warn-records/single-dev-warn?devId=1'
+				})
 			}
 		}
 	}

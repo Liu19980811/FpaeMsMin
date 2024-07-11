@@ -121,7 +121,7 @@
 		},
 		warnRecodClick(){
 			uni.navigateTo({
-				url: '/pages/warn-info/warn-info'
+				url: '/pages/warn-records/warn-records'
 			})
 		},
 		contactUsClick(){

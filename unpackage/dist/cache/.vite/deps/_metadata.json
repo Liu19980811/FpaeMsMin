@@ -1,13 +1,13 @@
 {
-  "hash": "d806ef38",
-  "configHash": "579e296a",
+  "hash": "dfb79cc0",
+  "configHash": "cc78a04d",
   "lockfileHash": "ff22b876",
-  "browserHash": "32d777da",
+  "browserHash": "18362ffd",
   "optimized": {
     "dayjs/esm/index": {
       "src": "../../../../../node_modules/dayjs/esm/index.js",
       "file": "dayjs_esm_index.js",
-      "fileHash": "e9236f17",
+      "fileHash": "e9e07d5a",
       "needsInterop": false
     }
   },

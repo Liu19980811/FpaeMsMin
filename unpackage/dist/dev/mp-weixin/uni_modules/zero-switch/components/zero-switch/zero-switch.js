@@ -135,5 +135,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     w: common_vendor.o((...args) => $options.onChange && $options.onChange(...args))
   });
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-b7d3b29e"], ["__file", "D:/HBuilderProjects/FpaeMsMin/uni_modules/zero-switch/components/zero-switch/zero-switch.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-b7d3b29e"]]);
 wx.createComponent(Component);

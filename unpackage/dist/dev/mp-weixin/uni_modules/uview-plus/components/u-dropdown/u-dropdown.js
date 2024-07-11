@@ -154,5 +154,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   };
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-029e9a16"], ["__file", "D:/HBuilderProjects/FpaeMsMin/uni_modules/uview-plus/components/u-dropdown/u-dropdown.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-029e9a16"]]);
 wx.createComponent(Component);

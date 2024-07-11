@@ -203,5 +203,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     G: common_vendor.n($options.bemClass)
   });
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-5ce41ee6"], ["__file", "D:/HBuilderProjects/FpaeMsMin/uni_modules/uview-plus/components/u-button/u-button.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-5ce41ee6"]]);
 wx.createComponent(Component);

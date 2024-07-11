@@ -31,5 +31,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     e: common_vendor.n(_ctx.customClass)
   });
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-014d39dc"], ["__file", "D:/HBuilderProjects/FpaeMsMin/uni_modules/uview-plus/components/u-cell-group/u-cell-group.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-014d39dc"]]);
 wx.createComponent(Component);
