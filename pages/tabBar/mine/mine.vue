@@ -5,7 +5,7 @@
     <!-- 个人信息模块 -->
     <view class="user-info-box">
       <view class="avatar-box">
-        <image class="avatar" src="/static/logo.png"></image>
+        <image class="avatar" src="/static/image/touxiang.jpeg"></image>
         <view class="avatar-text">
           <view class="name">点击登录</view>
           <view class="desc">173***1658</view>
@@ -34,7 +34,7 @@
     <view class="menu-box">
       <view class="menu-item" @click="myPondClick">
         <view class="menu-item-left">
-          <image src="/static/logo.png"></image>
+          <image src="/static/image/pond.png"></image>
           <view class="menu-item-left-text">
             我的鱼塘
           </view>
@@ -56,7 +56,7 @@
       </view> -->
       <view class="menu-item" @click="warnRecodClick">
         <view class="menu-item-left">
-          <image src="/static/logo.png"></image>
+          <image src="/static/image/warning-record.png"></image>
           <view class="menu-item-left-text">
             报警记录
           </view>
@@ -70,7 +70,7 @@
     <view class="menu-box">
       <view class="menu-item" @click="contactUsClick">
         <view class="menu-item-left">
-          <image src="/static/logo.png"></image>
+          <image src="/static/image/call.png"></image>
           <view class="menu-item-left-text">
             联系我们
           </view>
@@ -81,7 +81,7 @@
       </view>
 	  <view class="menu-item">
 	    <view class="menu-item-left">
-	      <image src="/static/logo.png"></image>
+	      <image src="/static/image/version.png"></image>
 	      <view class="menu-item-left-text">
 	        当前版本
 	      </view>
@@ -92,7 +92,7 @@
 	  </view>
 	  <view class="menu-item">
 	    <view class="menu-item-left">
-	      <image src="/static/logo.png"></image>
+	      <image src="/static/image/exit-login.png"></image>
 	      <view class="menu-item-left-text">
 	        退出登录
 	      </view>
